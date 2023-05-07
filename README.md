@@ -14,14 +14,12 @@ To train the DCT model, run:
 
 ```
 sh scripts/mnli_dct_train.sh #bert_path
-sh scripts/fever_dct_train.sh #bert_path
 ```
 
 You can also test the model has been saved by us.
 
 ```
 sh scripts/mnli_dct_eval.sh #checkpoint_path
-sh scripts/fever_dct_eval.sh #checkpoint_path
 ```
 
 ## Bias Extractability
