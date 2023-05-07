@@ -9,7 +9,7 @@ import log
 from dct.utils import InputExample
 
 logger = log.get_logger('root')
-#
+
 def _shuffle_and_restrict(examples: List[InputExample], num_examples: int, seed: int = 42) -> List[InputExample]:
     """
     Shuffle a list of examples and restrict it to a given maximum size.
