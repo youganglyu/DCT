@@ -89,6 +89,10 @@ class DataProcessor(ABC):
         pass
 
     @abstractmethod
+    def get_hard_examples2(self, data_dir) -> List[InputExample]:
+        pass
+
+    @abstractmethod
     def get_labels(self) -> List[str]:
         """Get the list of labels for this data set."""
         pass
@@ -101,6 +105,9 @@ class CTProcessor(DataProcessor):
 
     def get_hard_examples(self, data_dir):
         return self._create_examples(os.path.join(data_dir, "val.jsonl"), "hard")
+
+    def get_hard_examples2(self, data_dir):
+        return self._create_examples(os.path.join(data_dir, "val2.jsonl"), "hard2")
 
     def get_dev_examples(self, data_dir):
         return self._create_examples(os.path.join(data_dir, "dev.jsonl"), "dev")
@@ -150,10 +157,11 @@ DEFAULT_METRICS = ["acc"]
 
 TRAIN_SET = "train"
 HARD_SET = "hard"
+HARD_SET2 = "hard2"
 DEV_SET = "dev"
 
 
-SET_TYPES = [TRAIN_SET, DEV_SET, HARD_SET]
+SET_TYPES = [TRAIN_SET, DEV_SET, HARD_SET,HARD_SET2]
 
 
 def load_examples(task, data_dir: str, set_type: str, *_, num_examples: int = None,
@@ -176,6 +184,8 @@ def load_examples(task, data_dir: str, set_type: str, *_, num_examples: int = No
         examples = processor.get_dev_examples(data_dir)
     elif set_type == TRAIN_SET:
         examples = processor.get_train_examples(data_dir)
+    elif set_type == HARD_SET2:
+        examples = processor.get_hard_examples2(data_dir)
     else:
         raise ValueError(f"'set_type' must be one of {SET_TYPES}, got '{set_type}' instead")
 
