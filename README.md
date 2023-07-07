@@ -1,5 +1,5 @@
 # Feature-Level Debiased Natural Language Understanding (AAAI 2023)
-This repository is the implementation of our AAAI 2023 Paper [Feature-Level Debiased Natural Language Understanding](https://arxiv.org/abs/2212.05421). Please contact Yougang Lyu (youganglyu@gmail.com) if you have any question.
+This repository is the implementation of our AAAI 2023 Paper [Feature-Level Debiased Natural Language Understanding](https://ojs.aaai.org/index.php/AAAI/article/view/26567). Please contact Yougang Lyu (youganglyu@gmail.com) if you have any question.
 
 ## Datasets and Checkpoints
 
