@@ -35,10 +35,18 @@ The code for evaluating the extractability of biased features in the model repre
 If you find our work useful, please cite our paper as follows:
 
 ```
-@article{lyu-etal-2023-dct, 
-title={Feature-Level Debiased Natural Language Understanding}, 
-author={Yougang Lyu and Piji Li and Yechang Yang and Maarten de Rijke and Pengjie Ren and Yukun Zhao and Dawei Yin and Zhaochun Ren},
-year={2023}, 
-volume={37}, 
-pages={13353-13361} }
+@inproceedings{DBLP:conf/aaai/LyuLYRRZYR23,
+  author       = {Yougang Lyu and
+                  Piji Li and
+                  Yechang Yang and
+                  Maarten de Rijke and
+                  Pengjie Ren and
+                  Yukun Zhao and
+                  Dawei Yin and
+                  Zhaochun Ren},
+  title        = {Feature-Level Debiased Natural Language Understanding},
+  booktitle    = {Proceedings of {AAAI}},
+  pages        = {13353--13361},
+  year         = {2023},
+}
 ```
